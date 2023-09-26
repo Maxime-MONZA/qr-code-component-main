@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+
+  --text-size: 15px;
+
+  --spacing: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  
+  background-color: var(--lightGray);
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+@media (min-width: 374px) and (max-width: 1439px) {
+  .card {
+    width: 75%;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 280px;
+    gap: var(--spacing);
+  }
+
+  .description {
+    gap: 10px;
+  }
+}
+
+
+
+.card {
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--spacing);
+  border-radius: 1rem;
+
+  box-shadow: 0px 0px 20px -10px var(--darkBlue);
+}
+
+.title {
+  font-size: calc(var(--text-size) + 6px);
+  font-weight: 700;
+  color: var(--darkBlue);
+  padding: 5px 0px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 14px;
+}
+
+.qr-code {
+  border-radius: 0.5rem;
+}
+
+.explaination {
+  font-size: var(--text-size);
+  color: var(--grayishBlue);
+  margin-bottom: var(--spacing);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: var(--spacing);
+}
+.attribution a { color: hsl(228, 45%, 44%); }
